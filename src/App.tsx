@@ -1,5 +1,6 @@
 import { Global } from "@emotion/react"
 import { Form } from "./Form"
+import { TotalCount } from "./TotalCount"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         エンジニアアンケート！
       </h1>
       <div css={{ maxWidth: "640px", padding: "16px", margin: "0 auto" }}>
+        <TotalCount />
         <Form />
       </div>
     </>
