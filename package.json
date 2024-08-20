@@ -12,7 +12,8 @@
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "react": "19.0.0-rc-1eaccd82-20240816",
-    "react-dom": "19.0.0-rc-1eaccd82-20240816"
+    "react-dom": "19.0.0-rc-1eaccd82-20240816",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
