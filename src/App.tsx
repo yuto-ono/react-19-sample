@@ -1,16 +1,14 @@
 import { Global } from "@emotion/react"
-import { Form } from "./Form"
-import { TotalCount } from "./TotalCount"
-import { useTotalCount } from "./useCount"
+import { SurveyForm } from "./SurveyForm"
+import { TotalCountPresenter } from "./TotalCountPresenter"
+import { TotalCountContextProvider } from "./TotalCountContext"
 
 function App() {
-  const { count, error, isLoading } = useTotalCount()
-
   return (
     <>
       <Global
         styles={{
-          body: { margin: 0 },
+          body: { margin: 0, fontFamily: "sans-serif" },
           "*, *::before, *::after": { boxSizing: "border-box" },
         }}
       />
@@ -18,8 +16,10 @@ function App() {
         エンジニアアンケート！
       </h1>
       <div css={{ maxWidth: "640px", padding: "16px", margin: "0 auto" }}>
-        <TotalCount {...{ count, error, isLoading }} />
-        <Form />
+        <TotalCountContextProvider>
+          <TotalCountPresenter />
+          <SurveyForm />
+        </TotalCountContextProvider>
       </div>
     </>
   )

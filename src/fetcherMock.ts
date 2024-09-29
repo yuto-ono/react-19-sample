@@ -14,8 +14,23 @@ export const postAnswer = async (answer: {
   language: string
   comment: string
 }) => {
-  void answer
-  await sleep(1000)
+  console.log(answer)
   totalCount++
+  await sleep(1000)
+  // throw new Error("エラー時の挙動を確認")
   return { success: true }
+}
+
+// アンケートの集計結果を取得
+export const getSurveyResult = async () => {
+  await sleep(1000)
+  const surveyResult: Record<string, number> = {
+    TypeScript: 41,
+    Python: 23,
+    Go: 15,
+    Ruby: 13,
+    その他: 8,
+  }
+  console.log(surveyResult)
+  return surveyResult
 }
