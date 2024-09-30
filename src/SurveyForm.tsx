@@ -52,7 +52,10 @@ export const SurveyForm = () => {
               css={{ width: "100%", height: "100px" }}
             />
           ) : (
-            <p id={commentId} css={{ minHeight: "100px", margin: 0 }}>
+            <p
+              id={commentId}
+              css={{ minHeight: "100px", margin: 0, whiteSpace: "pre-wrap" }}
+            >
               {surveyFormData?.comment}
             </p>
           )}
