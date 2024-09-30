@@ -28,6 +28,10 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.22.5",
+    "@rollup/rollup-linux-arm64-gnu": "^4.22.5"
+  },
   "overrides": {
     "@types/react": "npm:types-react@rc",
     "@types/react-dom": "npm:types-react-dom@rc",
