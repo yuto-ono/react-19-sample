@@ -46,7 +46,7 @@ export const useSurveyForm = ({ revalidateSurveyResult }: Params) => {
           throw new Error("Invalid form data")
         }
         incrementTotalCount()
-        toResultMode({})
+        setDisplayResult(true)
         await postAnswer({ language, comment })
         revalidateTotalCount()
         if (revalidateSurveyResult) {
@@ -64,10 +64,7 @@ export const useSurveyForm = ({ revalidateSurveyResult }: Params) => {
     { succeeded: false }
   )
 
-  const [displayResult, toResultMode] = useOptimistic(
-    formState.succeeded,
-    () => true
-  )
+  const [displayResult, setDisplayResult] = useOptimistic(formState.succeeded)
 
   return { formState, sendForm, isPending, displayResult }
 }
