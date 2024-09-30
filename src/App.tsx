@@ -6,6 +6,7 @@ import { TotalCountContextProvider } from "./TotalCountContext"
 function App() {
   return (
     <>
+      <title>エンジニアアンケート - React19検証用プロトタイプ</title>
       <Global
         styles={{
           body: { margin: 0, fontFamily: "sans-serif" },
