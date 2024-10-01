@@ -34,7 +34,7 @@ export const ToggleButton = ({
       <span css={makeButtonStyle(displayResult, rate)}>
         <span css={{ position: "relative" }}>{value}</span>
         {displayResult && rate != null && (
-          <span css={{ fontSize: "80%" }}>{rate}%</span>
+          <span css={{ position: "relative", fontSize: "80%" }}>{rate}%</span>
         )}
       </span>
     </label>
@@ -51,6 +51,7 @@ const makeButtonStyle = (displayResult: boolean, rate?: number) => {
     border: "1px solid #e76f00",
     borderRadius: "4px",
     background: "#fff",
+    overflow: "hidden",
   })
 
   const notResultStyle = css(defaultStyle, {
